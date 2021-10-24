@@ -1,4 +1,4 @@
-package go3
+package exercise
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 //Array and Slice
-func main() {
+func go3() {
 	a := []int{}
 	// a := make([]int,10,100) len 10 capacity 100
 	//ARRAY and SLICES.

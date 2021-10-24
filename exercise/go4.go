@@ -1,10 +1,10 @@
-package main
+package exercise
 
 import (
 	"fmt"
 )
 
-func main() {
+func go4() {
 	if true {
 		fmt.Println("The test is true")
 	}

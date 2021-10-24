@@ -1,4 +1,4 @@
-package main
+package exercise
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ var wg = sync.WaitGroup{}
 var counter = 0
 var m = sync.RWMutex{}
 
-func main() {
+func go7() {
 	var msg = "Hello"
 	wg.Add(1)
 	go func(msg string) {

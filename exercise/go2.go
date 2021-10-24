@@ -1,11 +1,11 @@
-package go2
+package exercise
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func go2() {
 	go count("sheep")
 	go count("fish")
 	count("bear")
