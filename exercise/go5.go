@@ -1,10 +1,10 @@
-package main
+package exercise
 
 import (
 	"fmt"
 )
 
-func main() {
+func go5() {
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}

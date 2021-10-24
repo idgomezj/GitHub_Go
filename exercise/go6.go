@@ -1,10 +1,10 @@
-package main
+package exercise
 
 import (
 	"fmt"
 )
 
-func main() {
+func go6() {
 	var w Writer = ConsoleWriter{}
 	w.Write([]byte("hello Go!"))
 }

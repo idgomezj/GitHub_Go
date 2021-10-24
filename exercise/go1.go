@@ -1,4 +1,4 @@
-package go1
+package exercise
 
 import (
 	"errors"
@@ -11,7 +11,7 @@ type person struct {
 	age  int
 }
 
-func main() {
+func go1() {
 	x := 5
 	var y int = 7
 	var a [5]int
