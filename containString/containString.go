@@ -7,23 +7,30 @@
 package containString
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"strings"
 )
 
-func main() {
-	var stringValue string
-	fmt.Printf("Please give as a string input ")
-	_, err := fmt.Scan(&stringValue)
+func containString() {
+	//var stringValue string
+	//var stdin *bufio.Reader
 
+	consoleReader := bufio.NewReader(os.Stdin)
+	fmt.Print("Please give as a string input.... \n")
+
+	stringValue, err := consoleReader.ReadString('\n')
 	for {
 		if err != nil {
 			fmt.Println("There was an error updating the string!, Trying again...!")
 			continue
 		} else {
-			if strings.Contains(stringValue, "i") &&
-				strings.Contains(stringValue, "a") &&
-				strings.Contains(stringValue, "n") {
+			stringValue = strings.ToUpper(stringValue)
+			//fmt.Print(string(stringValue[len(stringValue)-2]))
+			if string(stringValue[0]) == "I" &&
+				strings.Contains(stringValue, "A") &&
+				string(stringValue[len(stringValue)-2]) == "N" {
 				fmt.Println("Found!")
 			} else {
 				fmt.Println("Not Found!")
