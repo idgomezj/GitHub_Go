@@ -10,7 +10,16 @@ import (
 )
 
 func main() {
-	array := []int{12, 1, 3, 4, 2, 34, 35, 46, 5, 17}
+	var number int
+	fmt.Printf("Can you tell us how many data your slice is going to have? ")
+	fmt.Scan(&number)
+	array := make([]int, number)
+	for k := 0; k < number; k++ {
+		fmt.Printf("Please write the %v number \n", k)
+		fmt.Scan(&array[k])
+	}
+	fmt.Println("This is the array to sorted")
+	fmt.Println(array)
 	c := make(chan int)
 	n := len(array) / 4
 	for i := 1; i < 4; i++ {
@@ -29,6 +38,7 @@ func main() {
 
 	go sorted(array, c)
 	<-c
+	fmt.Println("This is the array sorted")
 	fmt.Println(array)
 
 }
@@ -41,6 +51,7 @@ func sorted(array []int, c chan int) {
 			}
 		}
 	}
+	fmt.Printf("Data after Sorted %v\n", array)
 
 	c <- 2
 }
