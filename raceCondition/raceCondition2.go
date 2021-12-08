@@ -1,4 +1,4 @@
-package main
+package raceCondition
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ And the go keywords added before the function is executed,
 can be executed separately on different cores, increasing application performance.
 */
 
-func main() {
+func mainRaceCondition() {
 	// added paralelism. Uncomment to see  difference in timing
 
 	// runtime.GOMAXPROCS(10)
